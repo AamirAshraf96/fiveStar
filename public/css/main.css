@@ -94,9 +94,9 @@ html {
     animation: fadein 3s;
 }
 
-.bg {
+.row .col-md .bg {
     /* The image used */
-
+    background-image: url(../img/header.jpg);
 
     /* Full height */
     height: 100%;
