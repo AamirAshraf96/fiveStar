@@ -9,6 +9,7 @@ html {
     height: 100%;
 }
 
+
 #navbar {
     overflow: hidden;
     background-color: #ffffff;
@@ -65,29 +66,91 @@ html {
     }
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.headerText {
+    font-family: 'Sansita Swashed', cursive;
+    color: white;
+    display: table-cell;
+    height: 1000px;
+    text-align: center;
+    width: 1000px;
+    vertical-align: middle;
+    animation: fadein 3s;
+}
+
+.menuText{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    animation: fadein 3s;
+}
+
 .bg {
     /* The image used */
-    background-image: url("../img/shawarma.png");
+    background-image: url("../img/shawarmaWithFries.jpeg");
 
     /* Full height */
     height: 65%;
 
-    /* Center and scale the image nicely */
+    /* Center and scale the image nicely 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .section1 {
     padding: 5%;
 }
 
-/*
-.button {
-    display: table-cell;
-    height: 950px;
-    text-align: center;
-    width: 1400px;
-    vertical-align: middle;
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
 }
-*/
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.cardText{
+
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

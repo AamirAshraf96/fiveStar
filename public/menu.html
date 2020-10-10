@@ -2,17 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>fiveStar</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- for animation -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="#">Fixed top</a>
-    </nav>
+    <!-- Header -->
 
+    <!-- Header img -->
+    <div class="bg">
+        <div class="headerText">
+            <h1>MENU</h1>
+        </div>
+    </div>
+    <!-- Header img End -->
+
+    <div id="navbar">
+        <a href="#default" id="logo"><img src="img/logoWithoutbg.png" width="100" height="50">5 Star Shawarma</a>
+        <div id="navbar-right">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a class="active" href="#menu">Menu</a>
+        </div>
+    </div>
+
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.padding = "30px 10px";
+                document.getElementById("logo").style.fontSize = "25px";
+            } else {
+                document.getElementById("navbar").style.padding = "50px 10px";
+                document.getElementById("logo").style.fontSize = "35px";
+            }
+        }
+    </script>
+    <!-- Header End -->
+
+    <div class="mt-5 mb-5 container">
+        <div class="row">
+            <div class="col">
+                <img src="img/wrap.jpg" alt="Avatar" class="image rounded-pill">
+                <div class="overlay">
+                    <div class="cardText">WRAPS</div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="img/wings.jpg" alt="Avatar" class="image rounded-pill">
+                <div class="overlay">
+                    <div class="cardText">WINGS</div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="img/wrap.jpg" alt="Avatar" class="image rounded-pill">
+                <div class="overlay">
+                    <div class="cardText">POUTINE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: black; color: white;">
+        <div data-aos=" zoom-in-up" class="container">
+            <div class="row">
+                <div data-aos="zoom-in-up" class="mt-3 col">
+                    <i class="fa fa-phone-square" aria-hidden="true"></i><strong> Call Us:</strong>
+                    </i><a href="tel:+15198800544">(519) 880 0544</a>
+                    <p class="mt-3 mb-0">Find Us On Our Social Media!</p>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-6"></div>
+                <div data-aos="zoom-in-up" class="mt-3 col">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>Terms Of Service</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-100 mt-10 credits">
+                <p>Made By fiveStar &copy; 2020. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End-->
+
+
+    <!-- For animation and firebase -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- For animation and firebase End -->
 </body>
 
 </html>
