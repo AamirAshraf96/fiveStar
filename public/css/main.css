@@ -1,22 +1,147 @@
 body,
 html {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    margin: 0;
 }
 
-.bgImage {
-    /* The image used */
-    background-image: url(../img/header.jpg);
-
-    /* Full height */
-    height: 75%;
+#navbar {
+    overflow: hidden;
+    background-color: white;
+    padding: 30px 10px;
+    transition: 0.4s;
+    position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 99;
+  }
+  
+  #navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  #navbar #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+  }
+  
+  #navbar a:hover {
+    background-color: gold;
+    color: black;
+  }
+  
+  #navbar-right {
+    float: right;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+  }
+  
+  @media screen and (max-width: 580px) {
+    #navbar {
+      padding: 20px 10px !important;
+    }
+    #navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    #navbar-right {
+      float: none;
+    }
+  }
+
+
+.masthead {
+    height: 90vh;
+    min-height: 500px;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+  }
+
+  /* DEMO GENERAL ============================== */
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+  }
+  
+  .hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+  }
+  
+  .hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .hover-content {
+    position: relative;
+    z-index: 99;
+  }
+  
+  
+  /* DEMO 1 ============================== */
+  .hover-1 img {
     
-}
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+  }
+  
+  .hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+  }
+ 
+  /*
+  .hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  */
+  
+  .hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+  }
+  
+  .hover-1:hover .hover-1-content {
+    bottom: 2rem;
+  }
+  
+  .hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-1:hover img {
+    left: 0;
+  }
+  
+  .hover-1:hover .hover-overlay {
+    opacity: 0;
+  }
+
+
+  
